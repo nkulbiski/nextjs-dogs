@@ -13,7 +13,7 @@ export default function Home() {
 
   const isRefreshing = isValidating && data && data.length === size;
 
-  const { ref, inView } = useInView();
+  const { ref, inView } = useInView({ rootMargin: '500px 0px' });
 
   useEffect(() => {
     if (inView && !isRefreshing) { setSize(size + 1); }
