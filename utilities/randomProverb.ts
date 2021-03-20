@@ -1,5 +1,3 @@
-import proverbs from 'data/proverbs'
+import proverbs from 'data/proverbs';
 
-export default () => {
-    return proverbs[Math.floor(Math.random() * proverbs.length)]
-}
+export default () => proverbs[Math.floor(Math.random() * proverbs.length)];
