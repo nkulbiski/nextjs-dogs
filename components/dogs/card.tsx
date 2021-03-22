@@ -11,19 +11,15 @@ export interface IDogCard {
 const card = ({ className, image }:IDogCard) => (
   <div className={className}>
     <FadeIn>
-      <Image src={image} width="400px" height="400px" priority />
+      <Image src={image} width="600px" height="600px" objectFit="cover" priority />
       <Caption />
     </FadeIn>
   </div>
 );
 
 export default styled(card)({
-  display: 'inline-block',
   background: '#000',
   margin: '5px',
   position: 'relative',
-  img: {
-    objectFit: 'cover',
-
-  },
+  textAlign: 'center',
 });

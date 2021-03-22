@@ -1,5 +1,5 @@
 import { useSWRInfinite } from 'swr';
-import Card from 'components/dogs/card';
+import Gallery from 'components/dogs/gallery';
 import { useInView } from 'react-intersection-observer';
 import { useEffect } from 'react';
 
@@ -22,9 +22,7 @@ export default function Home() {
   if (!data) return 'Loading...';
   return (
     <>
-      <div>
-        {data.map((dogs) => dogs.message.map((image:string) => <Card image={image} key={image} />))}
-      </div>
+      <Gallery data={data} />
       <div ref={ref} />
     </>
   );
