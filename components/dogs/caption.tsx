@@ -16,10 +16,14 @@ const StyledCaption = styled(Caption)({
   color: '#fff',
   position: 'absolute',
   width: '100%',
-  margin: '0',
-  padding: '15px',
   bottom: '0',
+  margin: '0',
   background: '#000',
+  opacity: '.8',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  minHeight: '4em',
 });
 
 export default React.memo(StyledCaption);

@@ -27,6 +27,6 @@ const Gallery = ({ className, data }:IGallery) => {
 
 export default styled(Gallery)({
   display: 'grid',
-  gridTemplateColumns: 'repeat(auto-fill, minmax(400px, 1fr))',
+  gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))',
   gridGap: '1rem',
 });
