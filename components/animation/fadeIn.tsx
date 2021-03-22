@@ -1,5 +1,9 @@
 import styled, { keyframes } from 'styled-components';
 
+export interface IFadeIn {
+  delay?: number
+}
+
 const fadeIn = keyframes`
   0% {
     opacity: 0;
@@ -10,5 +14,5 @@ const fadeIn = keyframes`
 `;
 
 export default styled.div`
-  animation: ${fadeIn} 5s;
+  animation: ${fadeIn} ${({ delay = 5 }:IFadeIn) => `${delay}s`};
 `;
