@@ -1,13 +1,10 @@
 import styled from 'styled-components';
 import Card from 'components/dogs/card';
+import { IDogs } from 'interfaces/idogs';
 
 export interface IGallery {
     className?: string
     data: Array<IDogs> | null
-}
-
-export interface IDogs {
-  message: Array<string>
 }
 
 const Gallery = ({ className, data }:IGallery) => {
