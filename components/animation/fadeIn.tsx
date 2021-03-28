@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-props-no-spreading */
+import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
 export interface IFadeIn {
@@ -13,6 +15,12 @@ const fadeIn = keyframes`
   }
 `;
 
-export default styled.div`
+const Wrapper = styled.div`
   animation: ${fadeIn} ${({ delay = 5 }:IFadeIn) => `${delay}s`};
 `;
+
+export default (WrappedComponent: React.ComponentType<any>) => (props: any) => (
+  <Wrapper>
+    <WrappedComponent {...props} />
+  </Wrapper>
+);

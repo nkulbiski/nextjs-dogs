@@ -1,19 +1,19 @@
 import styled from 'styled-components';
-import FadeIn from 'components/animation/fadeIn';
 import Caption from 'components/dogs/caption';
 import Image from 'next/image';
+import fadeIn from 'components/animation/fadeIn';
 
 export interface IDogCard {
     image: string,
     className?: string
 }
 
+const FadeInDogImage = fadeIn(Image);
+
 const card = ({ className, image }:IDogCard) => (
   <div className={className}>
-    <FadeIn>
-      <Image src={image} width="600px" height="600px" objectFit="cover" priority />
-      <Caption />
-    </FadeIn>
+    <FadeInDogImage src={image} width="600px" height="600px" objectFit="cover" priority />
+    <Caption />
   </div>
 );
 
