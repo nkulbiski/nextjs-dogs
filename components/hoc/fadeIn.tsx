@@ -16,7 +16,7 @@ const fadeIn = keyframes`
 `;
 
 const Wrapper = styled.div`
-  animation: ${fadeIn} ${({ delay = 5 }:IFadeIn) => `${delay}s`};
+  animation: ${fadeIn} ${({ delay = 12 }:IFadeIn) => `${delay}s`};
 `;
 
 export default (WrappedComponent: React.ComponentType<any>) => (props: any) => (
